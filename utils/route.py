@@ -3,7 +3,8 @@ from utils import format
 
 
 def add_route_to_menuRoutes(file_path, name):
-  menuRoutes_path = '/' + format.to_kebab_case(name)
+  lower_camel_name = format.to_lower_camel_case(name)
+  menuRoutes_path = '/' + format.to_kebab_case(lower_camel_name)
   menuRoutes_name = format.to_upper_camel_case(name)
 
   route_template = Template('''  {
