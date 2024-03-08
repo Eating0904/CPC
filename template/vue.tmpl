@@ -1,0 +1,20 @@
+<template lang="pug">
+baseTemplate(componentName="{{ componentName }}")
+  {{ componentName }}(
+    
+  )
+</template>
+
+<script>
+import baseTemplate from '../template'
+import {{ componentName }} from '../../../../components/{{ componentName }}'
+
+export default {
+  name: '{{ componentName }}Page',
+  components: {
+    baseTemplate,
+    {{ componentName }},
+  },
+  setup(){}
+}
+</script>
